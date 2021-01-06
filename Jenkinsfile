@@ -16,5 +16,13 @@ pipeline {
       }
     }
 
+    stage('Bees Deploy') {
+      steps {
+        echo 'The bees are now deploying'
+        sleep 5
+        sh 'echo "Amazing what can be done with Jenkins"'
+      }
+    }
+
   }
 }
