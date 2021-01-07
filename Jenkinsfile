@@ -5,9 +5,12 @@ pipeline {
       agent any
       steps {
         echo 'Good morning!'
-        junit '**/surefire-reports/**/*.xml'
+        sh 'echo "I\'m a ${BUZZ_NAME}"'
       }
     }
 
+  }
+  environment {
+    BUZZ_NAME = 'Worker Bee'
   }
 }
