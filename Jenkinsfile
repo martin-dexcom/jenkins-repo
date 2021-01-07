@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         echo 'Good morning!'
-        archiveArtifacts(artifacts: 'target/*jar', fingerprint: true)
+        junit '**/surefire-reports/**/*.xml'
       }
     }
 
