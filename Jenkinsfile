@@ -21,6 +21,12 @@ pipeline {
       }
     }
 
+    stage('End') {
+      steps {
+        echo 'End'
+      }
+    }
+
   }
   environment {
     BUZZ_NAME = 'Worker Bee'
